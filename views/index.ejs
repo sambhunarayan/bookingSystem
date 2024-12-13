@@ -1,0 +1,90 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Booking system | Home</title>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1,maximum-scale=1"
+		/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+		<!-- momet  -->
+		<!-- Include Moment.js from CDN -->
+		<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+
+		<!-- javascript for global function -->
+		<script src="./js/index.js"></script>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<div class="headerContainer">
+					<a href="" class="logo">
+						<img src="./images/logo.png" class="logoImage" />
+					</a>
+					<input class="menu-btn" type="checkbox" id="menu-btn" />
+					<label class="menu-icon" for="menu-btn"
+						><span class="navicon"></span
+					></label>
+					<ul class="menu">
+						<li class="menuList1">
+							<a class="menuLink" href="/">Home</a>
+						</li>
+						<li class="menuList2">
+							<a class="menuLink" href="">About </a>
+						</li>
+						<li class="menuList3">
+							<a class="menuLink" href="">Contact</a>
+						</li>
+						<li class="menuList4">
+							<a class="menuLink" href="">Login</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<div class="slotFormContainer">
+				<div class="card">
+					<div class="formHeading"><h4>Book now</h4></div>
+					<div class="formContent">
+						<div class="inputContainer">
+							<label for="bookingDate">Booking date</label>
+							<input
+								class="inputTag"
+								id="bookingDate"
+								type="date"
+								name="bookingDate"
+							/>
+						</div>
+
+						<div class="inputContainer">
+							<button
+								class="primaryButton"
+								id="slotButton"
+								onclick="viewSlots(event)"
+							>
+								Select Slot
+							</button>
+						</div>
+					</div>
+					<div id="error"><%= msg %></div>
+				</div>
+			</div>
+			<div id="responseMessage"></div>
+			<!-- The Modal -->
+			<div id="myModal" class="modal">
+				<!-- Modal content -->
+				<div class="modalContent">
+					<div class="modalHeader">
+						<span class="close">&times;</span>
+						<h2 id="modalHeading"></h2>
+					</div>
+					<div id="modalMain" class="modalBody"></div>
+					<div class="modalFooter"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
