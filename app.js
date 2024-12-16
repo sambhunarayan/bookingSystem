@@ -16,7 +16,7 @@ log4js.configure('./log.json'); // Configure log4js using log.json settings
 // Enable Cross-Origin Resource Sharing (CORS)
 const corsOptions = {
 	origin: (origin, callback) => {
-		const whitelist = ['http://localhost:3000', 'https://ayursahya.com']; // Allowed origins
+		const whitelist = ['http://localhost:3000']; // Allowed origins
 		if (!origin || whitelist.includes(origin)) {
 			// Allow requests with no origin (e.g., server-to-server) or from whitelisted domains
 			callback(null, true);
